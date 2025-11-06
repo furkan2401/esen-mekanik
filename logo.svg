@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1e3a8a"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <circle cx="30" cy="30" r="20" fill="none" stroke="url(#g)" stroke-width="6"/>
+    <g stroke="url(#g)" stroke-width="6" stroke-linecap="round">
+      <line x1="30" y1="5" x2="30" y2="15"/>
+      <line x1="30" y1="45" x2="30" y2="55"/>
+      <line x1="5" y1="30" x2="15" y2="30"/>
+      <line x1="45" y1="30" x2="55" y2="30"/>
+    </g>
+    <text x="75" y="40" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="url(#g)">ESEN MEKANİK</text>
+  </g>
+</svg>
