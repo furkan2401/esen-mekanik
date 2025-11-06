@@ -1,161 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ESEN MEKANİK | Çelik Konstrüksiyon & Demir Doğrama</title>
-  <meta name="description" content="ESEN MEKANİK: Çelik konstrüksiyon, demir doğrama ve çeliğe dair anahtar teslim çözümler.">
-  <link rel="icon" type="image/svg+xml" href="/logo.svg">
-  <!-- Tailwind via CDN -->
+  <meta name="description" content="Çelik konstrüksiyon, demir doğrama ve endüstriyel çelik çözümleri. ESEN MEKANİK.">
+  <link rel="icon" href="/logo.svg">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .container{max-width:1100px}
+    .container{max-width:1120px}
+    .reveal{opacity:0; transform: translateY(16px); transition: all .7s ease}
+    .reveal-visible{opacity:1; transform: translateY(0)}
   </style>
 </head>
-<body class="bg-white text-slate-800">
-  <!-- Top bar -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
-    <nav class="container mx-auto flex items-center justify-between px-4 py-3">
+<body class="bg-slate-50 text-slate-800">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3">
-        <img src="logo.svg" alt="ESEN MEKANİK Logo" class="h-10 w-auto">
+        <img src="logo.svg" class="h-10" alt="logo">
       </a>
       <div class="hidden md:flex items-center gap-6 font-medium">
-        <a href="#hizmetler" class="hover:text-blue-700">Hizmetler</a>
-        <a href="#projeler" class="hover:text-blue-700">Projeler</a>
-        <a href="#hakkimizda" class="hover:text-blue-700">Hakkımızda</a>
-        <a href="#iletisim" class="hover:text-blue-700">İletişim</a>
-        <a href="tel:+905555555555" class="inline-flex items-center rounded-full bg-blue-700 px-4 py-2 text-white hover:bg-blue-800">Hemen Ara</a>
+        <a href="#hizmetler" class="hover:text-sky-700">Hizmetler</a>
+        <a href="#projeler" class="hover:text-sky-700">Projeler</a>
+        <a href="#neden" class="hover:text-sky-700">Neden Biz</a>
+        <a href="#iletisim" class="hover:text-sky-700">İletişim</a>
+        <a href="tel:+905555555555" class="rounded-full bg-sky-600 text-white px-4 py-2 hover:bg-sky-700">Hemen Ara</a>
       </div>
-      <button id="menuBtn" class="md:hidden inline-flex items-center rounded-md border px-3 py-2">Menü</button>
+      <button id="mBtn" class="md:hidden px-3 py-2 border rounded">Menü</button>
     </nav>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200">
-      <div class="px-4 py-3 space-y-3">
+    <div id="mPanel" class="md:hidden hidden border-t border-slate-200">
+      <div class="container mx-auto px-4 py-3 space-y-3">
         <a href="#hizmetler" class="block">Hizmetler</a>
         <a href="#projeler" class="block">Projeler</a>
-        <a href="#hakkimizda" class="block">Hakkımızda</a>
+        <a href="#neden" class="block">Neden Biz</a>
         <a href="#iletisim" class="block">İletişim</a>
-        <a href="tel:+905555555555" class="inline-flex items-center rounded-full bg-blue-700 px-4 py-2 text-white">Hemen Ara</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative">
-    <div class="absolute inset-0 -z-10">
-      <div class="h-full w-full bg-gradient-to-b from-slate-900 via-slate-900/80 to-white">
-        <img src="assets/img/project1.jpg" class="h-full w-full object-cover mix-blend-overlay opacity-60" alt="Çelik Konstrüksiyon">
+  <!-- Hero (light) -->
+  <section class="bg-gradient-to-br from-white to-sky-50">
+    <div class="container mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+      <div class="reveal">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-slate-900">Çelik Konstrüksiyon & <span class="text-sky-600">Demir Doğrama</span></h1>
+        <p class="mt-6 text-lg text-slate-600 max-w-xl">ESEN MEKANİK; ferah, yalın ve kurumsal bir anlayışla endüstriyel çelik yapılarda anahtar teslim çözümler sunar.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#projeler" class="rounded-lg border border-sky-300 bg-white px-5 py-3 text-sky-700 hover:bg-sky-100">Projeler</a>
+          <a href="#iletisim" class="rounded-lg bg-emerald-500 px-5 py-3 text-white hover:bg-emerald-600">Teklif Al</a>
+        </div>
       </div>
-    </div>
-    <div class="container mx-auto px-4 py-24 md:py-32 text-white">
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-        Çelik Konstrüksiyon ve Demir Doğrama<br/>
-        <span class="text-blue-300">kurumsal çözümler</span>
-      </h1>
-      <p class="mt-6 max-w-2xl text-lg md:text-xl text-slate-100/90">
-        ESEN MEKANİK; endüstriyel ve mimari çelik yapılarda, kaliteli işçilik ve zamanında teslimat anlayışıyla hizmet verir.
-      </p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="#projeler" class="rounded-full bg-white/10 px-5 py-3 backdrop-blur hover:bg-white/20">Projelerimizi Görün</a>
-        <a href="#iletisim" class="rounded-full bg-blue-600 px-5 py-3 hover:bg-blue-700 text-white">Teklif Al</a>
-      </div>
-      <div class="mt-10 flex gap-6 text-sm text-slate-100/80">
-        <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-green-400"></span> Anahtar teslim</div>
-        <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-green-400"></span> Proje & Uygulama</div>
-        <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-green-400"></span> Zamanında teslim</div>
+      <div class="reveal">
+        <div class="rounded-2xl overflow-hidden shadow-lg ring-1 ring-slate-200">
+          <img src="assets/img/work-1.jpg" class="w-full h-80 object-cover" alt="Saha görseli">
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Services -->
   <section id="hizmetler" class="container mx-auto px-4 py-16">
-    <div class="text-center">
+    <div class="text-center reveal">
       <h2 class="text-3xl md:text-4xl font-bold">Hizmetler</h2>
-      <p class="mt-3 text-slate-600">Çeliğe dair uçtan uca profesyonel çözümler.</p>
+      <p class="mt-3 text-slate-600">Çeliğe dair uçtan uca profesyonel çözümler</p>
     </div>
     <div class="mt-10 grid md:grid-cols-3 gap-6">
-      <div class="rounded-2xl border p-6 hover:shadow-lg">
-        <h3 class="text-xl font-bold">Çelik Konstrüksiyon</h3>
-        <p class="mt-2 text-slate-600">Fabrika, depo, hangar, tarım yapıları ve özel çelik çatı/taşıyıcı sistemleri.</p>
+      <div class="reveal rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lg">
+        <h3 class="text-xl font-bold text-sky-700">Çelik Konstrüksiyon</h3>
+        <p class="mt-2 text-slate-600">Fabrika, depo, tarım yapıları ve çatı-cephe sistemleri.</p>
       </div>
-      <div class="rounded-2xl border p-6 hover:shadow-lg">
-        <h3 class="text-xl font-bold">Çeliğe Dair Her Şey</h3>
-        <p class="mt-2 text-slate-600">Otomasyon, kesim-büküm, montaj, bakım ve yerinde çözüm hizmetleri.</p>
+      <div class="reveal rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lg">
+        <h3 class="text-xl font-bold text-sky-700">Çeliğe Dair Her Şey</h3>
+        <p class="mt-2 text-slate-600">Kesim-büküm, kaynak, otomasyon, bakım ve onarım.</p>
       </div>
-      <div class="rounded-2xl border p-6 hover:shadow-lg">
-        <h3 class="text-xl font-bold">Demir Doğrama</h3>
-        <p class="mt-2 text-slate-600">Kapı, korkuluk, ferforje, merdiven ve mimari detay imalat-montaj.</p>
+      <div class="reveal rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lg">
+        <h3 class="text-xl font-bold text-sky-700">Demir Doğrama</h3>
+        <p class="mt-2 text-slate-600">Kapı, korkuluk/ferforje, merdiven ve mimari detaylar.</p>
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="hakkimizda" class="bg-slate-50 py-16">
+  <!-- Why us -->
+  <section id="neden" class="bg-white py-16 border-t border-slate-200">
     <div class="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-      <div>
+      <div class="reveal">
         <h2 class="text-3xl font-bold">Neden ESEN MEKANİK?</h2>
         <ul class="mt-5 space-y-3 text-slate-700">
           <li>• Proje – statik – imalat – montaj zincirinde tek elden yönetim</li>
-          <li>• Şeffaf keşif ve sözleşme, sürprizsiz fiyatlandırma</li>
+          <li>• Sözleşme ve termin odaklı süreç</li>
           <li>• İş güvenliği ve kalite standartlarına tam uyum</li>
-          <li>• Referanslarla kanıtlı, yerinde uygulama tecrübesi</li>
+          <li>• Yerinde uygulama tecrübesi ve referanslar</li>
         </ul>
       </div>
-      <div class="grid grid-cols-2 gap-4">
-        <img src="assets/img/project1.jpg" class="rounded-xl object-cover w-full h-40" alt="Proje görseli"><img src="assets/img/project2.jpg" class="rounded-xl object-cover w-full h-40" alt="Proje görseli"><img src="assets/img/project3.jpg" class="rounded-xl object-cover w-full h-40" alt="Proje görseli"><img src="assets/img/project4.jpg" class="rounded-xl object-cover w-full h-40" alt="Proje görseli">
+      <div class="grid grid-cols-2 gap-4 reveal">
+        <img src="assets/img/work-1.jpg" class="rounded-xl object-cover w-full h-40" alt="Proje"><img src="assets/img/work-2.jpg" class="rounded-xl object-cover w-full h-40" alt="Proje"><img src="assets/img/work-3.jpg" class="rounded-xl object-cover w-full h-40" alt="Proje"><img src="assets/img/work-4.jpg" class="rounded-xl object-cover w-full h-40" alt="Proje">
       </div>
     </div>
   </section>
 
   <!-- Projects -->
   <section id="projeler" class="container mx-auto px-4 py-16">
-    <div class="text-center">
-      <h2 class="text-3xl md:text-4xl font-bold">Seçili Projeler</h2>
-      <p class="mt-3 text-slate-600">Sahadan kareler.</p>
+    <div class="text-center reveal">
+      <h2 class="text-3xl md:text-4xl font-bold">Referans Projeler</h2>
+      <p class="mt-3 text-slate-600">Sahadan seçili işler</p>
     </div>
     <div class="mt-10 grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-      <button class="group relative aspect-[4/3] overflow-hidden rounded-xl shadow hover:shadow-lg focus:outline-none" data-img="assets/img/project1.jpg">
-  <img src="assets/img/project1.jpg" alt="ESEN MEKANİK proje 1" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
-  <span class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></span>
-</button>
-<button class="group relative aspect-[4/3] overflow-hidden rounded-xl shadow hover:shadow-lg focus:outline-none" data-img="assets/img/project2.jpg">
-  <img src="assets/img/project2.jpg" alt="ESEN MEKANİK proje 2" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
-  <span class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></span>
-</button>
-<button class="group relative aspect-[4/3] overflow-hidden rounded-xl shadow hover:shadow-lg focus:outline-none" data-img="assets/img/project3.jpg">
-  <img src="assets/img/project3.jpg" alt="ESEN MEKANİK proje 3" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
-  <span class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></span>
-</button>
-<button class="group relative aspect-[4/3] overflow-hidden rounded-xl shadow hover:shadow-lg focus:outline-none" data-img="assets/img/project4.jpg">
-  <img src="assets/img/project4.jpg" alt="ESEN MEKANİK proje 4" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
-  <span class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></span>
-</button>
-<button class="group relative aspect-[4/3] overflow-hidden rounded-xl shadow hover:shadow-lg focus:outline-none" data-img="assets/img/project5.jpg">
-  <img src="assets/img/project5.jpg" alt="ESEN MEKANİK proje 5" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
-  <span class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></span>
-</button>
-<button class="group relative aspect-[4/3] overflow-hidden rounded-xl shadow hover:shadow-lg focus:outline-none" data-img="assets/img/project6.jpg">
-  <img src="assets/img/project6.jpg" alt="ESEN MEKANİK proje 6" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
-  <span class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></span>
-</button>
-<button class="group relative aspect-[4/3] overflow-hidden rounded-xl shadow hover:shadow-lg focus:outline-none" data-img="assets/img/project7.jpg">
-  <img src="assets/img/project7.jpg" alt="ESEN MEKANİK proje 7" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
-  <span class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></span>
-</button>
-<button class="group relative aspect-[4/3] overflow-hidden rounded-xl shadow hover:shadow-lg focus:outline-none" data-img="assets/img/project8.jpg">
-  <img src="assets/img/project8.jpg" alt="ESEN MEKANİK proje 8" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy">
-  <span class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></span>
-</button>
+      <button class="reveal group relative overflow-hidden rounded-xl ring-1 ring-slate-200 hover:shadow-lg" data-img="assets/img/work-1.jpg"><img src="assets/img/work-1.jpg" class="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" alt="Proje görseli"><span class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></span></button><button class="reveal group relative overflow-hidden rounded-xl ring-1 ring-slate-200 hover:shadow-lg" data-img="assets/img/work-2.jpg"><img src="assets/img/work-2.jpg" class="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" alt="Proje görseli"><span class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></span></button><button class="reveal group relative overflow-hidden rounded-xl ring-1 ring-slate-200 hover:shadow-lg" data-img="assets/img/work-3.jpg"><img src="assets/img/work-3.jpg" class="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" alt="Proje görseli"><span class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></span></button><button class="reveal group relative overflow-hidden rounded-xl ring-1 ring-slate-200 hover:shadow-lg" data-img="assets/img/work-4.jpg"><img src="assets/img/work-4.jpg" class="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" alt="Proje görseli"><span class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></span></button><button class="reveal group relative overflow-hidden rounded-xl ring-1 ring-slate-200 hover:shadow-lg" data-img="assets/img/work-5.jpg"><img src="assets/img/work-5.jpg" class="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" alt="Proje görseli"><span class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></span></button><button class="reveal group relative overflow-hidden rounded-xl ring-1 ring-slate-200 hover:shadow-lg" data-img="assets/img/work-6.jpg"><img src="assets/img/work-6.jpg" class="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" alt="Proje görseli"><span class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></span></button><button class="reveal group relative overflow-hidden rounded-xl ring-1 ring-slate-200 hover:shadow-lg" data-img="assets/img/work-7.jpg"><img src="assets/img/work-7.jpg" class="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" alt="Proje görseli"><span class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></span></button><button class="reveal group relative overflow-hidden rounded-xl ring-1 ring-slate-200 hover:shadow-lg" data-img="assets/img/work-8.jpg"><img src="assets/img/work-8.jpg" class="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" alt="Proje görseli"><span class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></span></button>
     </div>
   </section>
 
-  <!-- CTA band -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-blue-900 to-blue-600"></div>
-    <div class="container mx-auto px-4 py-10 text-white flex flex-col md:flex-row items-center justify-between gap-4">
-      <h3 class="text-2xl font-bold">Projeniz için ücretsiz keşif ve fiyat teklifi</h3>
+  <!-- CTA strip -->
+  <section class="bg-gradient-to-r from-sky-600 to-emerald-500 text-white">
+    <div class="container mx-auto px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <h3 class="text-2xl font-bold">Projeniz için ücretsiz keşif ve teklif</h3>
       <div class="flex gap-3">
-        <a href="https://wa.me/905555555555" class="rounded-full bg-white/10 px-5 py-3 hover:bg-white/20">WhatsApp</a>
-        <a href="tel:+905555555555" class="rounded-full bg-white px-5 py-3 text-blue-700 font-semibold">Hemen Ara</a>
+        <a href="https://wa.me/905555555555" class="rounded-full bg-white/20 px-5 py-3 hover:bg-white/30">WhatsApp</a>
+        <a href="tel:+905555555555" class="rounded-full bg-white px-5 py-3 text-sky-700 font-semibold">Hemen Ara</a>
       </div>
     </div>
   </section>
@@ -163,23 +123,23 @@
   <!-- Contact -->
   <section id="iletisim" class="container mx-auto px-4 py-16">
     <div class="grid md:grid-cols-2 gap-10">
-      <div>
+      <div class="reveal">
         <h2 class="text-3xl font-bold">İletişim</h2>
-        <p class="mt-3 text-slate-600">Aşağıdaki bilgiler örnektir, kendi bilgilerinizi girin.</p>
-        <div class="mt-6 space-y-3">
-          <p><strong>Telefon:</strong> <a href="tel:+905555555555" class="text-blue-700">+90 555 555 55 55</a></p>
-          <p><strong>E-posta:</strong> <a href="mailto:info@esenmekanik.com" class="text-blue-700">info@esenmekanik.com</a></p>
+        <p class="mt-3 text-slate-600">Bilgileri kendinize göre güncelleyin.</p>
+        <div class="mt-6 space-y-2">
+          <p><strong>Telefon:</strong> <a class="text-sky-700" href="tel:+905555555555">+90 555 555 55 55</a></p>
+          <p><strong>E-posta:</strong> <a class="text-sky-700" href="mailto:info@esenmekanik.com">info@esenmekanik.com</a></p>
           <p><strong>Adres:</strong> Manisa / Türkiye</p>
         </div>
       </div>
-      <form class="rounded-2xl border p-6 space-y-4">
+      <form class="reveal rounded-2xl bg-white border border-slate-200 p-6 space-y-4">
         <div class="grid md:grid-cols-2 gap-4">
           <input class="w-full rounded-lg border px-4 py-3" placeholder="Ad Soyad">
           <input class="w-full rounded-lg border px-4 py-3" placeholder="Telefon">
         </div>
         <input class="w-full rounded-lg border px-4 py-3" placeholder="E-posta">
         <textarea class="w-full rounded-lg border px-4 py-3 h-32" placeholder="Mesajınız"></textarea>
-        <button type="button" class="rounded-lg bg-blue-700 px-5 py-3 text-white hover:bg-blue-800">Gönder</button>
+        <button type="button" class="rounded-lg bg-emerald-500 px-5 py-3 text-white hover:bg-emerald-600">Gönder</button>
         <p class="text-sm text-slate-500">Form demo amaçlıdır.</p>
       </form>
     </div>
@@ -189,34 +149,31 @@
     <div class="container mx-auto px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <img src="logo.svg" class="h-8" alt="logo">
-        <span class="font-semibold">© sandbox ESEN MEKANİK</span>
+        <span class="font-semibold">© ESEN MEKANİK</span>
       </div>
       <div class="text-sm text-slate-600">Çelik konstrüksiyon • Çeliğe dair her şey • Demir doğrama</div>
     </div>
   </footer>
 
-  <!-- Simple lightbox -->
-  <div id="lightbox" class="fixed inset-0 hidden bg-black/80 z-50 p-6">
-    <button id="closeLb" class="absolute top-4 right-4 rounded-full bg-white/10 px-4 py-2 text-white">Kapat</button>
+  <!-- Lightbox + reveal script -->
+  <div id="lb" class="fixed inset-0 hidden bg-black/80 z-50 p-6">
+    <button id="lbClose" class="absolute top-4 right-4 rounded bg-white/10 px-4 py-2 text-white">Kapat</button>
     <img id="lbImg" src="" class="mx-auto max-h-full object-contain rounded-lg shadow-2xl" alt="Büyük görsel">
   </div>
 
   <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    const mBtn=document.getElementById('mBtn'); const mPanel=document.getElementById('mPanel');
+    mBtn?.addEventListener('click',()=>mPanel.classList.toggle('hidden'));
 
-    const lb = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lbImg');
-    const closeLb = document.getElementById('closeLb');
-    document.querySelectorAll('[data-img]').forEach(b => {
-      b.addEventListener('click', () => {
-        lbImg.src = b.dataset.img;
-        lb.classList.remove('hidden');
-      });
-    });
-    closeLb.addEventListener('click', () => lb.classList.add('hidden'));
-    lb.addEventListener('click', (e) => { if(e.target === lb) lb.classList.add('hidden'); });
+    const lb=document.getElementById('lb'); const lbImg=document.getElementById('lbImg'); const lbClose=document.getElementById('lbClose');
+    document.querySelectorAll('[data-img]').forEach(b=>{ b.addEventListener('click',()=>{ lbImg.src=b.dataset.img; lb.classList.remove('hidden'); });});
+    lbClose.addEventListener('click',()=>lb.classList.add('hidden'));
+    lb.addEventListener('click',(e)=>{ if(e.target===lb) lb.classList.add('hidden'); });
+
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('reveal-visible'); });
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   </script>
 </body>
 </html>
